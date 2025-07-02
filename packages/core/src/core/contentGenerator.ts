@@ -125,6 +125,7 @@ export async function createContentGenerator(
       apiKey: config.apiKey === '' ? undefined : config.apiKey,
       vertexai: config.vertexai,
       httpOptions,
+      baseUrl: process.env.GEMINI_BASE_URL,
     });
 
     return googleGenAI.models;
